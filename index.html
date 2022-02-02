@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- JS -->
+    <script type="text/javascript" src="./css/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="./css/min.js"></script>
+
+    <!-- css -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <nav style="height:35px" class="navbar navbar-light navbar-expand-md bg-light justify-content-md-center justify-content-start">
+      <!-- <a class="navbar-brand d-none d-md-inline" href=""><img style="width: 35%; height: 25%;" src="./logo-ASTU.png" alt=""></a> -->
+      
+      <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end align-items-center w-100" id="collapsingNavbar2">
+        <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
+            <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/adamaastu/"><i class="fa fa-facebook mr-1"></i></a> </li>
+            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/company/adastu"><i class="fa fa-linkedin"></i></a> </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Header -->
+
+    <!-- Header 2 -->
+    <!-- <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar"     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Acme</a>
+      <div class="collapse navbar-collapse justify-content-between" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#">Ball Bearings</a>
+          <a class="nav-item nav-link" href="#">TNT Boxes</a>
+        </div>
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#">Logout</a>
+        </div>
+      </div>
+    </nav> -->
+    <nav style="height: 150px;" 
+        class="navbar navbar-light navbar-expand-lg bg-white justify-content-md-center justify-content-start shadow-sm p-3 mb-5 bg-white rounded">
+      <!-- <a class="navbar-brand d-none d-md-inline" href=""><img style="width: 35%; height: 25%;" src="./logo-ASTU.png" alt=""></a> -->
+      <a class="navbar-brand d-none d-md-inline" href="">
+          <img style="width: 450px;" src="./images/header-ASTU 600x150px.png" alt="">
+      </a>
+      <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div style="z-index: 10000;" class="collapse navbar-collapse flex-column align-items-start ml-lg-2 ml-0" id="collapsingNavbar2">
+        <span class="navbar-text ml-auto py-0 text-dark"> 
+          <h6>
+            <i class="fa fa-phone white-text mr-4"> +251-221-110400</i>
+          </h6>
+        </span>
+        <ul class="navbar-nav mb-auto mt-0 ml-auto">
+          <!-- 
+            <li class="nav-item active">
+                <a class="nav-link py-0" href="#">Home</a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link py-0" href="#">Product</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link py-0" href="#">Company</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link py-0" href="#">Blog</a>
+              </li> 
+            -->
+            <ul class="nav navbar-nav">
+              <div class="btn-group bg-white">
+                <button class="btn btn-white btn-sm" type="button">
+                  Latest
+                </button>
+                <button type="button" class="btn btn-sm btn-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <li class="dropdown-item"><a href="#/latest/news">News</a></li>
+                  <li class="dropdown-item"><a href="#/latest/upcoming-events">Upcoming Events</a></li>
+                  <li class="dropdown-item"><a href="/#">ASTU Visitors</a></li>
+                  <li class="dropdown-item"><a href="/#">Archive News</a></li>
+                </div>
+              </div>
+
+              <div class="btn-group bg-white">
+                <button class="btn btn-white btn-sm" type="button">
+                  Academics
+                </button>
+                <button type="button" class="btn btn-sm btn-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <li class="dropdown-submenu"><a class="dropdown-item" href="#">Libraries</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="/#/academics/libraries/libraries-services">Libraries Services</a></li>
+                      <li class="dropdown-item"><a href="/#/academics/libraries/branch-libraries">Branch Libraries</a></li>
+                      <li class="dropdown-item"><a href="http://etd.astu.edu.et/">Thesis & Dissertation</a></li>
+                      <li class="dropdown-item"><a href="http://opac.astu.edu.et/">E-Catalogue</a></li>
+                      <li class="dropdown-item"><a href="http://dl.astu.edu.et/">ASTU Digital Library</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a class="dropdown-item" href="#">Division</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="/#/academics/division/division-of-freshman-program">Division of Freshman Program </a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown-submenu"><a class="dropdown-item" href="#">Schools</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="/#/academics/schools/school-of-civil-engineering-and-architecture">School of Civil Engineering and Architecture </a></li>
+                      <li class="dropdown-item"><a href="/#/academics/schools/school-of-mechanical-chemical-materials-engineering">School of Mechanical, Chemical &amp; Materials Eng.</a></li>
+                      <li class="dropdown-item"><a href="/#/academics/schools/soeec">School of Electrical Engineering &amp; Computing</a></li>
+                      <li class="dropdown-item"><a href="/#/academics/schools/school-of-applied-natural-science">School of Applied Natural Science </a></li>
+                      <li class="dropdown-item"><a href="/#/academics/schools/school-of-humanities-and-social-science">School of Humanities and Social Science </a></li>
+                    </ul>
+                  </li>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"></li>
+                  </ul>
+                </div>
+              </div>
+            
+              <div class="btn-group bg-white">
+                <button class="btn btn-white btn-sm" type="button">
+                  Admission
+                </button>
+                <button type="button" class="btn btn-sm btn-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                    <li class="dropdown-item"><a href="/#/admission/academic-calendar">Academic Calendar</a></li>
+                    <li class="dropdown-item"><a href="/#/admission/application-procedure">Application Procedure</a></li>
+                    <li class="dropdown-item"><a href="/#/admission/what-is-new">What is New?</a></li>
+                    <li class="dropdown-item"><a href="/#/admission/school-programs">School &amp; Programs</a></li>
+                    <li class="dropdown-item"><a href="/#/admission/downloads">Downloads</a></li>
+                    <li class="dropdown-item"><a href="/#/admission/undergraduate">Undergraduate</a></li>
+                    <li class="dropdown-item"><a href="/#/admission/postgraduate-programs">Postgraduate Programs</a></li>
+                    <li class="dropdown-item"><a href="/#/admission/continuing-education-institute">Continuing Education Institute</a></li>
+                </div>
+              </div>
+              <div class="btn-group bg-white">
+                <button class="btn btn-white btn-sm" type="button">
+                  Research
+                </button>
+                <button type="button" class="btn btn-sm btn-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <li class="dropdown-submenu"><a class="dropdown-item" href="#">ASTU Research Project</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="/#/research/astu-research-project/astu-sponsored-research-project">ASTU Sponsored </a></li>
+                      <li class="dropdown-item"><a href="/#/research/astu-research-project/community-services-projects">Community Services </a></li>
+                      <li class="dropdown-item"><a href="/#/research/astu-research-project/consultancy-services">Consultancy Services</a></li>
+                      <li class="dropdown-item"><a href="/#/research/astu-research-project/externally-sponsired-research-projects">Externally Sponsired </a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a class="dropdown-item" href="#">External &amp; Internal Collaborations</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="/#/research/external-internal-collaborations/abroad-university-collaborations">Abroad University </a></li>
+                      <li class="dropdown-item"><a href="/#/research/external-internal-collaborations/local-university-collaborations">Local University </a></li>
+                      <li class="dropdown-item"><a href="/#/research/external-internal-collaborations/university-industry-linkages">University Industry Linkages</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a class="dropdown-item" href="#">Publications</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="http://ejssd.astu.edu.et" target="_blank">EJSSD</a></li>
+                      <li class="dropdown-item"><a href="/#/research/publications/news-letter">News Letter</a></li>
+                      <li class="dropdown-item"><a href="/#/research/publications/proceedings">Proceedings</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a class="dropdown-item" href="#">Research &amp; Excellence centers</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="/#/research/research-execellence-centers/cee">CEE</a></li>
+                      <li class="dropdown-item"><a href="/#/research/research-execellence-centers/center-for-sustainable-energy-development">CSED</a></li>
+                      <li class="dropdown-item"><a href="/#/research/research-execellence-centers/ctc">CTC</a></li>
+                      <li class="dropdown-item"><a href="/#/research/research-execellence-centers/stem">Stem</a></li>
+                      <li class="dropdown-item"><a href="/#/research/research-execellence-centers/coamse">CoAMSE</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a class="dropdown-item" href="#">Research Output Dissemination</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="/#/research/research-output-dissemination/annual-research-conferences-review">ARCR</a></li>
+                      <li class="dropdown-item"><a href="/#/research/research-output-dissemination/workshop-symposium-conferences-proceedings">WSCP </a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu"><a class="dropdown-item" href="#">Working Guidelines &amp; Policies</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="/#/research/working-guidelines-policies/guidelines-for-authors">Guidelines for Authors</a></li>
+                      <li class="dropdown-item"><a href="/#/research/working-guidelines-policies/thematic-areas-of-astu">Thematic Areas of ASTU</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-item"><a href="/#/research/entrepreneurship-development-center-of-astu">Entrepreneurship Development Center</a></li>
+                  <li class="dropdown-submenu"><a class="dropdown-item" href="#">Research Calendar &amp; Announcement</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a href="http://ejssd.astu.edu.et/index.php/EJSSD/announcement" target="_blank">Call for EJSSD Papers</a></li>
+                      <li class="dropdown-item"><a href="/#/research/research-calendar-and-announcement/calls-for-firts-round-proposal">Calls for First Round Proposal</a></li>
+                      <li class="dropdown-item"><a href="/#/research/research-calendar-and-announcement/tentative-reserach-calander">Tentative Research Calender</a></li>
+                    </ul>
+                  </li>
+                </div>
+              </div>
+              <div class="btn-group bg-white">
+                <button class="btn btn-white btn-sm" type="button">
+                  Offices
+                </button>
+                <button type="button" class="btn btn-sm btn-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <li class="dropdown-item"><a href="/#/offices/academic-affairs">Academic Affairs</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/office-of-academic-staff-affairs">Office of Academic Staff Affairs</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/asqa">ASQA</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/audit-service-directorate">Audit Service Directorate </a></li>
+                  <li class="dropdown-item"><a href="/#/offices/ethics-and-anti-corruption">Ethics and Anti-Corruption</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/gender-affairs">Gender Affairs</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/institutional-transformation">Institutional Transformation</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/international-affairs-and-corporate-communication-directorate">IRCCD Directorate</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/legal-matters">Legal Matters</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/strategic-planning">Strategic Planning</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/transformation-and-external-affairs">Transformation and External Affairs</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/technology-transfer-and-community-service">Technology Transfer &amp; Community Service</a></li>
+                  <li class="dropdown-item"><a href="/#/offices/information-communication-technology-directorate">ICT Directorate</a></li>
+                </div>
+              </div>
+              <div class="btn-group bg-white">
+                <button class="btn btn-white btn-sm" type="button">
+                  Linkages
+                </button>
+                <button type="button" class="btn btn-sm btn-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <li class="dropdown-item"><a href="/#/linkages/astu-partners">ASTU Partners </a></li>
+                  <li class="dropdown-item"><a href="/#/linkages/collaborations-with-stem-network">Collaborations with STEM Network</a></li>
+                  <li class="dropdown-item"><a href="/#/linkages/abroad-university-collaborations">Abroad University Collaborations</a></li>
+                  <li class="dropdown-item"><a href="/#/linkages/local-university-collaborations"> Local University collaborations</a></li>
+                  <li class="dropdown-item"><a href="/#/linkages/university-industry-linkages">University Industry Linkages</a></li>
+                </div>
+              </div>
+              <div class="btn-group bg-white">
+                <button class="btn btn-white btn-sm" type="button" data-toggle="dropdown" aria-expanded="false">            
+                  Announcements
+                </button>
+                <button type="button" class="btn btn-sm btn-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only" >Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <li class="dropdown-item"><a href="/#/announcements/admissions">Admissions</a></li>
+                  <li class="dropdown-item"><a href="/#/announcements/vacancy-announcement">Vacancy Announcement</a></li>
+                  <li class="dropdown-item"><a href="/#/announcements/2012">የ2013 ዓ.ም መግቢያ ፈተና የምዝገባ ጥሪ</a></li>
+                  <li class="dropdown-item"><a href="/#/announcements/call-for-registrations">Call for Registrations</a></li>
+                  <li class="dropdown-item"><a href="http://www.astu.edu.et/about-us/choose-adama-science-technology-university-astu">Choose  ASTU</a></li>
+                </div>
+              </div>
+            </ul>
+          </ul>
+      </div>
+    </nav>
+    <!-- Header 2 -->
+
+    <!-- Content -->
+    <div class="d-flex mb-0 mt-0">
+      <div class="container mx-5 mb-0 mt-0">
+          <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+              <li data-target="#demo" data-slide-to="3"></li>
+              <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+          
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/2pp.jpg" alt="Los Angeles">
+
+                <!-- a carousel caption bottom left align transparent background -->
+                <div class="carousel-caption">
+                  <h5><strong>Dr. Girmaw Abebe Taddesse</strong></h5>
+                  <p>Research Scientist IBM Research - Africa</p>
+                  <p><strong>Keynote Title:</strong> Computer Vision and AI: Advances, Applications and Concerns</p>
+                </div>
+
+              </div>
+              <div class="carousel-item">
+                <img src="images/3pp.jpg" alt="Chicago">
+                <div class="carousel-caption">
+                  <h5><strong>Dr. Yabebal Tadesse Fantaye</strong></h5>
+                  <p>African Institute for Mathematical Sciences</p>
+                  <p><strong>Keynote Title:</strong> Probabilistic theory and deep learning</p> 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/4pp.jpg" alt="New York">
+                <div class="carousel-caption">
+                  <h5><strong>Dr. Dawit Assefa Head</strong></h5>
+                  <p>Center of Biomedical Engineering, Addis Ababa Institute of Technology, AAU</p>
+                  <p><strong>Keynote Title:</strong> Biomedical Imaging Applications of Machine Learning</p>
+              
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/5pp.jpg" alt="Chicago">
+                <div class="carousel-caption">
+                  <h5><strong>Dr. Taye Girma</strong></h5>
+                  <p>Deputy Director General, Ethiopian Artificial Intelligence Institute</p>
+                  <p><strong>Keynote Title:</strong> AI research challenges and opportunities in Ethiopia</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/6pp.jpg" alt="Chicago">
+                <div class="carousel-caption">
+                  <h5><strong>Prof. JemalH. Abhawa</strong></h5>
+                  <p>Director, the Parallel and Distributing Computing Laboratory Deakin University, Australia.</p>
+                  <p><strong>Keynote Title:</strong> Towards smart and sustainable household waste management system</p>
+              
+                </div>
+              </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+          <br>
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card" style="width:400px">
+                <img src="https://www.astu.edu.et/images/23_1_2022p.jpg" alt="23 1 2022p">
+                <div class="card-body">
+                  <h4 class="card-title">                          
+                    ASTU hosts ITEC Day and the launching ceremony of Alumni of Ethiopian Graduates from Indian Universities
+                  </h4>
+                  <p class="card-text text-truncate">
+                    The Alumni Association of Ethiopian Graduates from Indian Universities was launched at ASTU during the celebration of ITEC Day at ASTU. ITEC (Indian Economic and technical Cooperation) day was marked in a ceremony attended by H.E. Ambassador Robert Shetkintong, Indian Ambassador to Ethiopia, top officials from Indian Embassy and management of ASTU. In his welcoming speech, Dr. Lemi Guta, President of ASTU, expressed his appreciation for the ambassador for choosing ASTU to host ITEC Day. He underscored that ITEC provides good opportunities for capacity building for ASTU staff members.
+                    Ambassador Robert Shetkintong on his part noted that the ITEC initiative is designed in line with the principles of South-South cooperation. The ambassador opined that some 650 Indian companies have been registered in Ethiopia and underscored that there is to strengthen the multilateral relationship between the two sisterly nations. On the occasion a number of scholars shared their experiences on their study in India. Dr. Teshome, VPA, identified four objectives that ASTU can benefit from the study in India initiative. These are: attending trainings, delving into projects, study tour and equipment donation.
+                      On the occasion, H.E. Ambassador Robert Shetkintong and Dr. Lemi Guta, launched the establishment the Alumni Association of Ethiopian Graduates from Indian Universities.
+                      The objectives of the Alumni are as follows:
+                      (1) To maintain a spirit of cooperation and unity among members;
+                      (2) To build up a strong relationship between Indian University graduates and Indian Universities (hereinafter called “the universities”) and its past students;
+                      (3) To participate on various development projects;
+                      (4) To participate on the delivery of academic assistance to various institutions;
+                      (5) To host international research conferences, seminars, trainings, conducting joint researches.
+                  
+                  </p>
+                  <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                    Continue Reading
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ASTU hosts ITEC Day and the launching ceremony of Alumni of Ethiopian Graduates from Indian Universities                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="card-text">
+                      The Alumni Association of Ethiopian Graduates from Indian Universities was launched at ASTU during the celebration of ITEC Day at ASTU. ITEC (Indian Economic and technical Cooperation) day was marked in a ceremony attended by H.E. Ambassador Robert Shetkintong, Indian Ambassador to Ethiopia, top officials from Indian Embassy and management of ASTU. In his welcoming speech, Dr. Lemi Guta, President of ASTU, expressed his appreciation for the ambassador for choosing ASTU to host ITEC Day. He underscored that ITEC provides good opportunities for capacity building for ASTU staff members.
+                      Ambassador Robert Shetkintong on his part noted that the ITEC initiative is designed in line with the principles of South-South cooperation. The ambassador opined that some 650 Indian companies have been registered in Ethiopia and underscored that there is to strengthen the multilateral relationship between the two sisterly nations. On the occasion a number of scholars shared their experiences on their study in India. Dr. Teshome, VPA, identified four objectives that ASTU can benefit from the study in India initiative. These are: attending trainings, delving into projects, study tour and equipment donation.
+                        On the occasion, H.E. Ambassador Robert Shetkintong and Dr. Lemi Guta, launched the establishment the Alumni Association of Ethiopian Graduates from Indian Universities.
+                        The objectives of the Alumni are as follows: <br>
+                        (1) To maintain a spirit of cooperation and unity among members;<br>
+                        (2) To build up a strong relationship between Indian University graduates and Indian Universities (hereinafter called “the universities”) and its past students;<br>
+                        (3) To participate on various development projects;<br>
+                        (4) To participate on the delivery of academic assistance to various institutions;<br>
+                        (5) To host international research conferences, seminars, trainings, conducting joint researches. <br>
+                        <i class="fa fa-heart mr-1" style="color: red;"></i>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card" style="width:400px">
+                <img src="https://www.astu.edu.et/images/mg312022pho/adbo_s.jpg" alt="adbo s">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    Adama Science and Technology University signed MoU with AdamaFM
+                  </h4>
+                  <p class="card-text text-truncate">
+                    Adama Science and Technology University signed MoU with AdamaFM. The agreement is meant to help the university publicize its endeavors. AdamaFM will thus air programs involving the activities of the university.
+                  </p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://deeplearningindaba.com/2021/wp-content/uploads/sites/12/2021/05/ethiopia.jpeg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    The School of Electrical Engineering &amp; Computing will host an international research conference
+                  </h4>
+                  <p class="card-text text-truncate">
+                    The School of Electrical Engineering &amp; Computing will host an international research conference titled, <strong><span style="color: #000000; background-color: #ffffff;">"Strengthening Awareness and Application of Machine Learning and Artifical Intelligence in Ethiopia"</span></strong>. The conference will be held at <strong>ASTU from January 27-29, 2022</strong>.
+                  </p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://www.astu.edu.et/images/Newsphoto/262515605_936369270335178_3035526281391260750_n.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">Higher officials of Ministry of Education visited ASTU</h4>
+                  <p class="card-text text-truncate">
+                    The minister of Ministry of Education, Prof Berhanu Nega and his team visited Adama Science and Technology University on December 02, 2021. The main objective of the work visit was to create awareness about the quality of Ethiopian education system in general and specially in public universities of Ethiopia. The officials were cordially welcomed by higher officials of ASTU and members of Academic council .
+                    In his welcoming speech, the president of ASTU, Dr. Lemi Guta, expressed his heart felt gratitude to the honorable guests for their timely visit to ASTU.
+                    The minister, Prof. Berhanu Nega pointed out that improving the quality of education and the quality leaders in educational institutions, mitigating corruption from education sector and avoiding politics from educational institutions (merit based assignment), are the priorities of the Ministry of Education . He also underscored that public Universities must be autonomous to lead themselves so that they can solve problems by their own mechanisms.
+                    Dr. Samuel Kifle, the state minister of Ministry of Education reiterated that every individual in public universities must work harder than before to assure the quality of education in Ethiopia. Finally,the guests visited the different facilities of the university.
+                  
+                  </p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- <div class="col-sm-3">
+              <div class="card" style="width:400px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Some example text.</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
+            </div> -->
+        </div>
+      </div>
+      <div class="sidebar bg-light mr-3 p-3">
+         <!-- <small class="text-muted pl-3">WIDR PAY</small>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i>Dashboard</a></li>
+            <li><a href="#"><i class="far fa-credit-card"></i>Payment Page <img src="https://img.icons8.com/material-outlined/24/000000/new.png" /></a></li>
+            <li><a href="#"><i class="fas fa-file-invoice"></i>Invoices <img src="https://img.icons8.com/material-outlined/24/000000/2.png" /></a></li>
+        </ul> <small class="text-muted px-3">PRODUCTIVITY TOOLS</small>
+        <ul>
+            <li><a href="#"><i class="far fa-calendar-alt"></i>Online Scheduler</a></li>
+            <li><a href="#"><i class="fas fa-video"></i>Video Meeting</a></li>
+            <li><a href="#"><i class="fas fa-id-badge"></i>Public Profile</a></li>
+        </ul> <small class="text-muted px-3">GROW YOUR CLIENT BASE</small>
+        <ul>
+            <li><a href="#"><i class="fas fa-external-link-alt"></i>Share</a></li>
+            <li><a href="#"><i class="fas fa-code"></i>Add to Website</a></li>
+        </ul> -->
+        <small class="pl-3">QUICK LINKS</small>
+        <ul>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<span style="color: #008000;"><a href="https://www.astu.edu.et/images/Vacancy_for_recruiting_the_data_collectors_postponed.pdf" target="_blank" style="color: #008000;">Vacancy for Construction Productivity Data Collectors</a></span><a href="/announcements/vacancy-announcement" target="_blank" rel="noopener"><img src="./images/new-flash-gif-animation.gif" alt="new015"></a></li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="https://www.astu.edu.et/images/Events/Deep%20Learning%20IndabaX%20Ethiopia%20Conference%20Poster%20V1.1.pdf" target="_blank">The School of Electrical Engineering &amp; Computing will Host an International Research Conference</a></span><a href="/announcements/vacancy-announcement" target="_blank" rel="noopener"><img src="./new-flash-gif-animation.gif" alt="new015"></a>&nbsp;</li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="/#/academics/schools/school-of-mechanical-chemical-materials-engineering" target="_blank" rel="noopener">Virtual international workshop Organized by Department of Mechanical Engineering</a><a href="/announcements/vacancy-announcement" target="_blank" rel="noopener"><img src="./images/new-flash-gif-animation.gif" alt="new015"></a><a href="/academics/schools/school-of-mechanical-chemical-materials-engineering" target="_blank" rel="noopener"><span style="font-size: 14pt;"></span></a></span></li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="https://www.astu.edu.et/images/linked-pdf/September_-_2021_v1_PG_Final_Guidelines.pdf">Post Graduate Guidelines</a></span><a href="/images/linked-pdf/September_-_2021_v1_PG_Final_Guidelines.pdf"></a></strong></span></li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="https://www.astu.edu.et/images/linked-pdf/September_2021_ASTU_Postgraduate_Programs.pdf">Post Graduate Programmes</a></span></li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="https://www.astu.edu.et/images/report/FTA_2013e.pdf">ASTU Financial transparency</a></span></li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="https://www.astu.edu.et/images/linked-pdf/ASTU-EDCF_Project.pdf">ASTU-EDCF Project</a></li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;ASTU E-Student Management System</span></li>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👉<a href="http://instructor.astu.edu.et/" target="_blank" rel="noopener" style="color: #0000ff;">For Instructor only</a> <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👉<a href="https://estudent.astu.edu.et/" target="_blank" rel="noopener" style="color: #0000ff;">For Student only</a>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="https://lms.astu.edu.et" target="_blank" rel="noopener">ASTU&nbsp;ELearning Portal</a></li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="http://ejssd.astu.edu.et" target="_blank" rel="noopener noreferrer">Ethiopian Journal of Sciences and Sustainable Development Portal</a></li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="http://dl.astu.edu.et/" target="_blank" rel="noopener">ASTU Digital Library</a></li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="/#/stem/" target="_blank" rel="noopener noreferrer">ASTU STEM Center</a></li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;<a href="http://notice.astu.edu.et" target="_blank" rel="noopener">ASTU Notice Board&nbsp;</a></li>
+        </ul>
+        <small class="text-muted px-3">ANNOUNCEMENT</small>
+        <ul>
+          <li><i class="fa fa-angle-right"></i>&nbsp;
+            <a href="https://www.astu.edu.et/images/Vacancy_for_recruiting_the_data_collectors_postponed.pdf" target="_blank" style="color: #008000;">
+              Vacancy for Construction Productivity Data Collectors
+            </a>
+            <a href="/#/announcements/vacancy-announcement">
+              <img src="./images/new-flash-gif-animation.gif" alt="new015">
+            </a>
+          </li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;
+            <a href="/#/announcements/vacancy-announcement">Vacancy announcement for COE, IPS</a>
+          </li>
+          <li><i class="fa fa-angle-right"></i>&nbsp;
+            <a href="https://www.astu.edu.et/images/Announcement-link/UG_promotion.pdf">Academic fields in UG Program of ASTU</a>
+          </li>
+        </ul>
+
+        <!-- UPCOMING EVENTS -->
+        <small class="text-muted px-3">UPCOMING EVENTS</small>
+        <div class="text-center">
+          <h4><span style="font-size: 12pt; background-color: #ccffff; justify-content: center;">The School of Electrical Engineering &amp; Computing will Host an International Research Conference</span></h4>
+            <p style="text-align: center;">Click 👇</p>
+            <p style="text-align: center;"><span><a href="/images/Events/Deep%20Learning%20IndabaX%20Ethiopia%20Conference%20Poster%20V1.1.pdf" target="_blank" style="background-color: #99ccff; color: #000000;">Deep Learning IndabaX Ethiopia Conference Poster V1.1</a></span></p>
+          <h4><span style="color: #000080; font-size: 14pt; background-color: #f8ff99;">Virtual International Workshop Organized by&nbsp;Department of Mechanical Engineering</span></h4>
+            <p style="text-align: center;">Click 👇</p>
+            <p style="text-align: center;"><a href="/images/Events/Webinar%20Brouchure.pdf" target="_blank" style="background-color: #99ccff; color: #000000;">Webinar Brochure</a></span></p>
+            <p style="text-align: center;"><a href="/images/Events/Webinar%20Time%20Schedule.pdf" target="_blank" style="background-color: #99ccff; color: #000000;">Webinar Time Schedule</a></p>
+            <p style="text-align: center;"><a href="/images/Events/Webinar%20Poster.pdf" target="_blank" style="background-color: #99ccff; color: #000000;">Webinar Poster</a></p></div>
+        
+        <!-- SYSTEMS -->
+        <small class="text-muted px-3">SYSTEMS</small>
+        <div class="custom">
+          <p>
+            <span style="color: #000000;">
+              <img src="./images/logoicon.png" alt="">
+                <a href="http://srms.astu.edu.et" target="_blank" rel="noopener" style="color: #000000;"> Support Request Management System</a>
+            </span>
+            <br>
+            <span style="color: #000000;">
+              <img src="./images/logoicon.png" alt="">
+              <a href="http://hrms.astu.edu.et" target="_blank" rel="noopener noreferrer" style="color: #000000;"> Human Resource Management System</a>
+            </span>
+            <br>
+            <span style="color: #000000;">
+              <img src="./images/logoicon.png" alt=""><a href="http://ssms.astu.edu.et" target="_blank" rel="noopener noreferrer" style="color: #000000;"> Student Service Management System</a>
+            </span>
+            <br>
+            <span style="color: #000000;">
+              <img src="./images/logoicon.png" alt=""><a href="http://eams.astu.edu.et" target="_blank" rel="noopener noreferrer" style="color: #000000;"> Employee Attendance System</a>
+            </span>
+            <span style="color: #000000;">
+              <br>
+              <img src="./images/logoicon.png" alt="logoicon">
+              <a href="http://eStudent.astu.edu.et" target="_blank" rel="noopener noreferrer" style="color: #000000;">E-Student System</a>
+            </span>
+            <span style="color: #000000;">
+              <a href="http://bada.astu.edu.et" target="_blank" rel="noopener noreferrer" style="color: #000000;">
+                <br>
+              </a>
+            </span>
+          </p>
+        </div>
+
+        <!-- ACADEMICS MENU -->
+        <small class="text-muted px-3">ACADEMICS MENU</small>
+        <div class="custom">
+          <p style="padding-left: 30px;">
+            &nbsp;<a href="/admission/academic-calendar">Academic Calendar</a>&nbsp;(PG &amp; UG)
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Content -->
+</body>
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+
+    <div style="background-color: rgb(0, 64, 165)">
+      <div class="container">
+  
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 style="color: #fff;" class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+  
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row-->
+  
+      </div>
+    </div>
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+  
+      <!-- Grid row -->
+      <div class="row mt-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+  
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Adama Science and Technology University</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>We are dedicated to innovative knowledge!</p>
+          
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="mx-auto mb-4">
+          <i class="fa fa-map-marker">
+            <a style="color: #000000;" href="https://www.google.com/maps/dir/37.09024,-95.712891/H75P%2BJ7J+AdamaScience+and+Technology+University,+irreecha+gateway,+Adama,+Ethiopia/@8.9409726,39.3092294,8z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x164b1fa272b90363:0x3ff630d88d1e7fe4!2m2!1d39.2856437!2d8.559084">
+              <span>Adama Science and Technology University</span>
+            </a>
+          </i>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+          <p>
+            <!-- office icon -->
+            <i class="fa fa-building"></i>
+             International Relations and Corporate Communications <br>
+            <i class="fa fa-phone"></i> 
+            +251 -22-211-3961 <br>
+            <i class="fa fa-envelope"></i> 
+            irccd@astu.edu.et <br>
+            <br>
+            <i class="fa fa-building"></i>
+            Office of Registrar <br>  
+            <i class="fa fa-book"></i> 
+            +251 -221-100001 <br>
+            <i class="fa fa-envelope"></i> 
+            sar@astu.edu.et <br>
+            <i class="fa fa-map-marker"></i> 
+            P.O.Box: 1888 Adama, Ethiopia
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+        <a href="https://mebsahle.github.io/"> Meb Sahle</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+</html>
